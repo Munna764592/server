@@ -122,6 +122,7 @@ const Login = async (req, res) => {
             res.cookie(COOKIE_NAME, token, {
                 path: "/", expires,
                 signed: true,
+                SameSite=none
             })
             return res.status(200).json({ message: "OK" })
         }
